@@ -40,6 +40,7 @@ public class ResideLayout extends ViewGroup {
      * At least this much of a sliding pane will remain visible.
      * This indicates that there is more content available and provides
      * a "physical" edge to grab to pull it closed.
+     * 上层view的宽度
      */
     private static final int DEFAULT_OVERHANG_SIZE = 150; // dp;
 
@@ -146,8 +147,7 @@ public class ResideLayout extends ViewGroup {
 
     private final Rect mTmpRect = new Rect();
 
-    private final ArrayList<DisableLayerRunnable> mPostedRunnables =
-            new ArrayList<DisableLayerRunnable>();
+    private final ArrayList<DisableLayerRunnable> mPostedRunnables = new ArrayList<DisableLayerRunnable>();
 
     static final SlidingPanelLayoutImpl IMPL;
 
@@ -219,7 +219,7 @@ public class ResideLayout extends ViewGroup {
 
     public ResideLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-
+        //dip2px  密度*dp+0.5
         final float density = context.getResources().getDisplayMetrics().density;
         mOverhangSize = (int) (DEFAULT_OVERHANG_SIZE * density + 0.5f);
 

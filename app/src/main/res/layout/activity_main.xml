@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.example.administrator.fangbook.view.ResideLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/resideLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -8,25 +9,106 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ff00ff"
+        android:paddingLeft="50dp">
+
+        <com.example.administrator.fangbook.view.CircleImageView
+            android:id="@+id/main_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/default_img" />
 
         <TextView
-            android:background="#ff0000"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="wo shi 1" />
+            android:id="@+id/main_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_icon"
+            android:layout_marginTop="10dp"
+            android:text="未登录" />
+
+        <TextView
+            android:id="@+id/main_classified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_login"
+            android:layout_marginTop="20dp"
+            android:text="分类" />
+
+        <TextView
+            android:id="@+id/main_bookrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_classified"
+            android:layout_marginTop="20dp"
+            android:text="书架" />
+
+        <TextView
+            android:id="@+id/main_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_bookrack"
+            android:layout_marginTop="20dp"
+            android:text="扫描书籍" />
+
+        <TextView
+            android:id="@+id/main_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_scan"
+            android:layout_marginTop="20dp"
+            android:text="意见反馈" />
+
+        <TextView
+            android:id="@+id/main_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_feedback"
+            android:layout_marginTop="20dp"
+            android:text="关于作者" />
+
+
+        <TextView
+            android:id="@+id/main_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:text="主题" />
+
+        <TextView
+            android:id="@+id/main_button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/main_theme"
+            android:text="登录" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="visible">
 
         <TextView
-            android:background="#00ff00"
+            android:background="#ff00ff"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="40dp"
+            android:text="书架"
+            android:textSize="20sp" />
+
+
+        <FrameLayout
+            android:id="@+id/fl_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="wo shi 2" />
+            android:layout_below="@+id/title" />
     </RelativeLayout>
 </com.example.administrator.fangbook.view.ResideLayout>

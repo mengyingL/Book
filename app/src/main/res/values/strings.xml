@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">灰太狼读书</string>
+    <string name="star_me_rank1"><![CDATA[我在本榜收到星星:‘<font color="#F88C3D"> %1$s</font>’本榜排名:‘<font color="#F88C3D"> %2$s</font>’]]></string>
 </resources>
