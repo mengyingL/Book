@@ -2,10 +2,13 @@ package com.example.administrator.fangbook.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.fangbook.R;
+import com.example.administrator.fangbook.adapter.BookRackAdapter;
 import com.example.administrator.fangbook.base.BaseFragment;
 
 /**
@@ -21,8 +24,9 @@ public class BookRackFragment extends BaseFragment {
 
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
-//        TextView textView = view.findViewById(R.id.tv);
-//        textView.setText("书架");
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new BookRackAdapter(this));
     }
 
     public static BaseFragment getInstence() {
